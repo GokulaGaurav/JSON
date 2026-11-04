@@ -1,0 +1,32 @@
+﻿<Window x:Class="registrationcombobox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:registrationcombobox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Beige">
+    <StackPanel Margin="150,50,150,0">
+        <ComboBox Name="cmbnames" SelectionChanged="cmbnames_SelectionChanged"></ComboBox>
+        <Label>Name:</Label>
+        <TextBox Name="txtname"></TextBox>
+        <Label>Email:</Label>
+        <TextBox Name="txtemail"></TextBox>
+        <Label>Phone no:</Label>
+        <TextBox Name="txtphn"></TextBox>
+        <Label>Location:</Label>
+        <TextBox Name="txtloc"></TextBox>
+        <Button Content="Register" Name="btnreg" Margin="20" Background="Green" Foreground="White" Click="btnreg_Click"></Button>
+        <ListView Name="lstname">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="name" DisplayMemberBinding="{Binding name}"></GridViewColumn>
+                    <GridViewColumn Header="email" DisplayMemberBinding="{Binding email}"></GridViewColumn>
+                    <GridViewColumn Header="phone" DisplayMemberBinding="{Binding phone}"></GridViewColumn>
+                    <GridViewColumn Header="location" DisplayMemberBinding="{Binding location}"></GridViewColumn>
+                </GridView>
+                
+            </ListView.View>
+        </ListView>
+    </StackPanel>
+</Window>
